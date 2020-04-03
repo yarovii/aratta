@@ -17,9 +17,11 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"));
+        scene = new Scene(loadFXML("smooth_round"));
         stage.setScene(scene);
         stage.show();
+        /*ReadXLSX readXLSX = new ReadXLSX();
+        readXLSX.Start();*/
     }
 
     static void setRoot(String fxml) throws IOException {
