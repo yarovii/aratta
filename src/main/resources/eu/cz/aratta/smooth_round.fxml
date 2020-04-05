@@ -13,17 +13,17 @@
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="273.0" layoutY="280.0" mnemonicParsing="false" text="Расчет" />
+            <Button layoutX="273.0" layoutY="280.0" mnemonicParsing="false" text="Расчет" onAction="#onCalculate"/>
             <Label layoutX="105.0" layoutY="146.0" text="L" />
             <Label layoutX="105.0" layoutY="192.0" text="D" />
-            <Label layoutX="232.0" layoutY="146.0" prefHeight="17.0" prefWidth="68.0" style="-fx-background-color: #ffff00;" />
-            <Label layoutX="232.0" layoutY="192.0" prefHeight="17.0" prefWidth="68.0" style="-fx-background-color: #ffff00;" />
-            <TextField layoutX="142.0" layoutY="144.0" prefHeight="0.0" prefWidth="49.0">
+            <Label layoutX="232.0" layoutY="146.0" prefHeight="17.0" prefWidth="68.0" style="-fx-background-color: #ffff00;" fx:id="setL" />
+            <Label layoutX="232.0" layoutY="192.0" prefHeight="17.0" prefWidth="68.0" style="-fx-background-color: #ffff00;" fx:id="setD"/>
+            <TextField layoutX="142.0" layoutY="144.0" prefHeight="0.0" prefWidth="49.0" fx:id="getL" text="0">
                <font>
                   <Font size="10.0" />
                </font>
             </TextField>
-            <TextField layoutX="142.0" layoutY="190.0" prefHeight="0.0" prefWidth="49.0">
+            <TextField layoutX="142.0" layoutY="190.0" prefHeight="0.0" prefWidth="49.0" fx:id="getD" text="0">
                <font>
                   <Font size="10.0" />
                </font>

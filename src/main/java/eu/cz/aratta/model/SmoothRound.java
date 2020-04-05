@@ -1,30 +1,21 @@
 package eu.cz.aratta.model;
 
-import java.util.Map;
+import java.util.List;
 
 public class SmoothRound extends Detail {
-    private int length;
-    private int diameter;
-
-    public SmoothRound(Map<Integer, Integer> columns, Map<Integer, Integer> rows, int length, int diameter) {
-        super(columns, rows);
-        this.length = length;
-        this.diameter = diameter;
+    public SmoothRound(List<Integer> allColumns, List<Integer> allRows) {
+        super("smooth_round", allColumns, allRows);
     }
 
-    public int getLength() {
-        return length;
+    public boolean validation(double r, double c){
+        return basicValidation(r, c) || (r <= (1.2 * c) || r >= (30*c));
     }
 
-    public void setLength(int length) {
-        this.length = length;
-    }
+    public void calculateNewValues(){
+        int num = getRow()+Integer.parseInt(getAllowance()[0]);
+        setAllowanceRow(num+"±"+getAllowance()[1]);
 
-    public int getDiameter() {
-        return diameter;
-    }
-
-    public void setDiameter(int diameter) {
-        this.diameter = diameter;
+        num = getColumn()+Integer.parseInt(getAllowance()[0]);
+        setAllowanceColumn(num+"±"+getAllowance()[1]);
     }
 }
