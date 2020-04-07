@@ -18,12 +18,12 @@
             <Label layoutX="105.0" layoutY="192.0" text="D" />
             <Label layoutX="232.0" layoutY="146.0" prefHeight="17.0" prefWidth="68.0" style="-fx-background-color: #ffff00;" fx:id="setL" />
             <Label layoutX="232.0" layoutY="192.0" prefHeight="17.0" prefWidth="68.0" style="-fx-background-color: #ffff00;" fx:id="setD"/>
-            <TextField layoutX="142.0" layoutY="144.0" prefHeight="0.0" prefWidth="49.0" fx:id="getL" text="0">
+            <TextField layoutX="142.0" layoutY="144.0" prefHeight="0.0" prefWidth="49.0" fx:id="getL" text="3500">
                <font>
                   <Font size="10.0" />
                </font>
             </TextField>
-            <TextField layoutX="142.0" layoutY="190.0" prefHeight="0.0" prefWidth="49.0" fx:id="getD" text="0">
+            <TextField layoutX="142.0" layoutY="190.0" prefHeight="0.0" prefWidth="49.0" fx:id="getD" text="300">
                <font>
                   <Font size="10.0" />
                </font>

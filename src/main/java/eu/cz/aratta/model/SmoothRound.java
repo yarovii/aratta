@@ -8,13 +8,15 @@ public class SmoothRound extends Detail {
     }
 
     public boolean validation(double r, double c){
-        return basicValidation(r, c) || (r <= (1.2 * c) || r >= (30*c));
+        return basicValidation(r, c) || (r < (1.2 * c) || r > (30*c));
     }
 
     public void calculateNewValues(){
-        int num = getRow()+Integer.parseInt(getAllowance()[0]);
-        setAllowanceRow(num+"±"+getAllowance()[1]);
+        ////new Len
+        int num = getRow()+(3* Integer.parseInt(getAllowance()[0]));
+        setAllowanceRow(num+"±"+(3*Integer.parseInt(getAllowance()[1])));
 
+        ///new Diameter
         num = getColumn()+Integer.parseInt(getAllowance()[0]);
         setAllowanceColumn(num+"±"+getAllowance()[1]);
     }

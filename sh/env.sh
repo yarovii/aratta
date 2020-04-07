@@ -20,10 +20,10 @@ PLATFORM=mac
 #
 # Application specific variables
 #
-PROJECT=veryDemo
+PROJECT=aratta-demo
 VERSION=11.0
-MAINMODULE=com.example
-MAINCLASS=com.example.App
+MAINMODULE=eu.cz.aratta
+MAINCLASS=eu.cz.aratta.Main
 MAINJAR=$PROJECT-$VERSION.jar
 INSTALLERNAME=$PROJECT-$VERSION
 LAUNCHER=$PROJECT

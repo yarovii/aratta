@@ -1,9 +1,13 @@
 package eu.cz.aratta.repository;
 
-import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -14,6 +18,7 @@ public class ReadFromXLSX {
     private List<Integer> list;
     private Row row;
     private static ReadFromXLSX single_instance = null;
+    private String path = "/db/smooth_round.xlsx";
 
     private ReadFromXLSX() {
         this.list = new ArrayList<>();
@@ -36,29 +41,31 @@ public class ReadFromXLSX {
     }
 
     public List<Integer> getRows(String name) throws IOException {
-      workbook = WorkbookFactory.create(new File("db/smooth_round.xlsx"));
-      findSheetIndex(name);
+        InputStream excelFile = getClass().getResourceAsStream(path);
+        workbook = new XSSFWorkbook(excelFile);
+        findSheetIndex(name);
 
-      list = new ArrayList<>();
-      String s;
-      Iterator<Row> rowIt = sheet.iterator();
+        list = new ArrayList<>();
+        String s;
+        Iterator<Row> rowIt = sheet.iterator();
 
-      while(rowIt.hasNext()) {
-          row = rowIt.next();
-          s = row.getCell(row.getFirstCellNum()).toString();
-          if(s.isEmpty()) break;
+        while(rowIt.hasNext()) {
+            row = rowIt.next();
+            s = row.getCell(row.getFirstCellNum()).toString();
+            if(s.isEmpty()) break;
 
-          list.add((int)Double.parseDouble(s));
-//          System.out.println("row  " + s);
-      }
-      workbook.close();
+            list.add((int)Double.parseDouble(s));
+        }
+        workbook.close();
 
-      return list;
-  }
+        return list;
+    }
 
     public List<Integer> getColumns(String name) throws IOException {
-        workbook = WorkbookFactory.create(new File("db/smooth_round.xlsx"));
+        InputStream excelFile = getClass().getResourceAsStream(path);
+        workbook = new XSSFWorkbook(excelFile);
         findSheetIndex(name);
+
         list = new ArrayList<>();
         String s;
 
@@ -71,7 +78,6 @@ public class ReadFromXLSX {
             if(s.isEmpty()) break;
 
             list.add((int)Double.parseDouble(s));
-//            System.out.println("col  " + s);
         }
 
         workbook.close();
@@ -79,7 +85,8 @@ public class ReadFromXLSX {
     }
 
     public String getAllowance(int r, int c, String s) throws IOException {
-        workbook = WorkbookFactory.create(new File("db/smooth_round.xlsx"));
+        InputStream excelFile = getClass().getResourceAsStream(path);
+        workbook = new XSSFWorkbook(excelFile);
         findSheetIndex(s);
 
         row = sheet.getRow(r);
