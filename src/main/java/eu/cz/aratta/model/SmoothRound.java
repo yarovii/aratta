@@ -4,7 +4,7 @@ import java.util.List;
 
 public class SmoothRound extends Detail {
     public SmoothRound(List<Integer> allColumns, List<Integer> allRows) {
-        super("smooth_round", allColumns, allRows);
+        super("7062-90", allColumns, allRows);
     }
 
     public boolean validation(double r, double c){

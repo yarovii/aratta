@@ -10,8 +10,5 @@
         <module name="calculator" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="aratta" target="11" />
-    </bytecodeTargetLevel>
   </component>
 </project>

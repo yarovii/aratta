@@ -18,7 +18,7 @@ public class ReadFromXLSX {
     private List<Integer> list;
     private Row row;
     private static ReadFromXLSX single_instance = null;
-    private String path = "/db/smooth_round.xlsx";
+    private String path = "/db/7062-90.xlsx";
 
     private ReadFromXLSX() {
         this.list = new ArrayList<>();

@@ -6,9 +6,6 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <!--<modules>
-        <module>src</module>
-    </modules>-->
     <name>calculator</name>
     <organization>
         <name>Aratta</name>
@@ -29,31 +26,6 @@
             <artifactId>javafx-fxml</artifactId>
             <version>11.0.1</version>
         </dependency>
-        <!--<dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-graphics </artifactId>
-            <version>11</version>
-            <classifier>win</classifier>
-        </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-graphics </artifactId>
-            <version>11</version>
-            <classifier>linux</classifier>
-        </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-graphics </artifactId>
-            <version>11</version>
-            <classifier>mac</classifier>
-        </dependency>-->
-
-        <!-- read microsoft files -->
-        <!--<dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi</artifactId>
-            <version>4.1.2</version>
-        </dependency>-->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
@@ -119,64 +91,6 @@
                 </executions>
 
             </plugin>
-            <!--///////-->
-
-            <!--<plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.2.1</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>java</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <mainClass>eu.cz.aratta.Main</mainClass>
-                </configuration>
-            </plugin>-->
-            <!--<plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <release>${maven.compiler.release}</release>
-                </configuration>
-            </plugin>&lt;!&ndash;
-            <plugin>
-                <groupId>org.openjfx</groupId>
-                <artifactId>javafx-maven-plugin</artifactId>
-                <version>0.0.3</version>
-                <configuration>
-                    <mainClass>eu.cz.aratta.App</mainClass>
-                </configuration>
-            </plugin>&ndash;&gt;
-            &lt;!&ndash;<plugin>
-                <groupId>org.openjfx</groupId>
-                <artifactId>javafx-maven-plugin</artifactId>
-                <version>0.0.3</version>
-                <configuration>
-                    <release>${maven.compiler.release}</release>
-                    <jlinkImageName>hellofx</jlinkImageName>
-                    <launcher>launcher</launcher>
-                    <mainClass>eu.cz.aratta.Main</mainClass>
-&lt;!&ndash;                    <compress>2</compress>&ndash;&gt;
-                    <jlinkZipName>hellofxz</jlinkZipName>
-                    <jlinkImageName>hellofxi</jlinkImageName>
-                    <noManPages>true</noManPages>
-                    <noHeaderFiles>true</noHeaderFiles>
-                </configuration>
-            </plugin>&ndash;&gt;
-            &lt;!&ndash;<plugin>
-                <groupId>com.zenjava</groupId>
-                <artifactId>javafx-maven-plugin</artifactId>
-                <version>8.8.3</version>
-                <configuration>
-                    <vendor>Aratta</vendor>
-                    <mainClass>eu.cz.aratta.Main</mainClass>
-                </configuration>
-            </plugin>&ndash;&gt;-->
         </plugins>
     </build>
 </project>
